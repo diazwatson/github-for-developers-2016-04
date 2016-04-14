@@ -1,11 +1,12 @@
 #!/bin/bash
 count=$1
 
-for i in {1..100}
+
+for i in {1..99}
 #for i in {1..$count}
 #for { set i 1 } { $i < $count}
 do
-   #echo "Welcome $i times"
+   echo "Welcome $i times"
 	let "SEQ=i % 3"
 	echo "SEQ=" $SEQ
 	logger -p user.info -t MPP_Test -i "DEGRADED: MPP_Test: 50$SEQ # PSR Situation Test"
