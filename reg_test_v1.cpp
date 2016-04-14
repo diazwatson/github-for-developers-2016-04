@@ -32,4 +32,7 @@ int main()
 	std::string match = "[$&]";
 	std::string new_s = std::regex_replace(s, long_word_regex, match);
 	std::cout << new_s << '\n';
+
+	//TODO
+	exit(0);
 }
