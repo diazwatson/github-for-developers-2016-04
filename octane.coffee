@@ -2,6 +2,6 @@ http: require "http"
 
 http.createServer( (req, res) ->
   res.sendHeader 200, {"Content-Type": "text/plain"}
-  res.sendBody "Hello, GitHub!!!"
+  res.sendBody "Octane is delicious coffee!!"
   res.finish()
-).listen 8000
+).listen 8080
