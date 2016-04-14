@@ -1,7 +1,7 @@
 #!/bin/bash
 count=$1
 
-for i in {1..100}
+for i in {1..99}
 #for i in {1..$count}
 #for { set i 1 } { $i < $count}
 do
