@@ -82,7 +82,7 @@ You can find that visual of the GitHub flow at this link: <https://guides.github
 - See your working/staged area `git status`. This command is :heart:!
 
   - Change your file from 'working' to 'staging' by running `git add <file-name>`
-  - Change your file from 'staging' to 'history' by running git commit. (To avoid using the text editor, use `git commit -m "Enter commit message here")`
+  - Change your file from 'staging' to 'history' by running `git commit`. (To avoid using the text editor, use `git commit -m "Enter commit message here")`
   - Text editor opens: Write a 'commit message' tells a story of the changes you just made in 50 characters or less.
 
 - List the files in your current directory by running `ls -la`
@@ -94,7 +94,7 @@ You can find that visual of the GitHub flow at this link: <https://guides.github
 - Here are some shortcuts to know about in the future:
 
   - To automatically stage all files that have been changed, run `git add -A`. Note: This will only work for files that are already being tracked, not brand new files.
-  - Avoid the text editor in the commit by running git `commit -m "commit message"`
+  - Avoid the text editor in the commit by running `git commit -m "commit message"`
 
 ### Collaborating on Code
 
@@ -106,7 +106,7 @@ You can find that visual of the GitHub flow at this link: <https://guides.github
 
   - This means we only have to run `git push` and `git pull` in the future
 
-    - git pull is the combination of `git fetch` and `git merge`
+    - `git pull` is the combination of `git fetch` and `git merge`
 
 - `git branch` and `git branch -a` will help you see what is going on with your local and remote branches
 
@@ -167,8 +167,8 @@ You can find that visual of the GitHub flow at this link: <https://guides.github
 
 #### Local History
 
-- Use git log to view the history of the repository
-- git log will show commits from your own local repository, but also changes made by other collaborators
+- Use `git log` to view the history of the repository
+- `git log` will show commits from your own local repository, but also changes made by other collaborators
 - Experiment with different option switches to view history:
 
   - `git log`
@@ -279,9 +279,9 @@ Set up an alias in configurations: `git config --global alias.<desired-alias>` "
 - Merge conflict! Open index.html in your favorite text editor and look for the merge conflict markers.
 - Delete one copy of the code as well as the merge conflict markers.
 - Save and close.
-- Type git status to see the current status of your files.
+- Type `git status` to see the current status of your files.
 - Commit the changes: `git commit -m "Enter commit message"`.
-- Push up to GitHub: git push.
+- Push up to GitHub: `git push`.
 - Checkout back to our main branch: `git checkout gh-pages`
 - Merge our changes with a recursive merge: `git merge --no-ff shape-colors`
 - Push the changes up to GitHub: git push
@@ -301,7 +301,7 @@ Set up an alias in configurations: `git config --global alias.<desired-alias>` "
 
 #### Fixing the broken game
 
-- See the commit history: git lol.
+- See the commit history: `git lol`.
 - Find the commit where index.html was renamed to index.html and copy the first 4 characters of that commit ID
 - Revert that commit: `git revert <first-4-characters>`.
 - Complete the commit message in your text editor, save, and close.
@@ -312,7 +312,7 @@ Set up an alias in configurations: `git config --global alias.<desired-alias>` "
 
 ### Helpful commands
 
-- git diff: See local changes between working, staging, and history
+- **`git diff`**: See local changes between working, staging, and history
 
   - If we have added more changes to a file that we've already created, we can see differences between them with `git diff`
   - Add to a file just for this example: `echo "Here is one line of text" >> file2.md`
@@ -321,7 +321,7 @@ Set up an alias in configurations: `git config --global alias.<desired-alias>` "
   - `git commit -m "commit message"`
   - See status: `git status`
   - Add more text: `echo "Here is another line of text" >> file2.md`
-  - Stage: git add .
+  - Stage: `git add .`
   - More text: `echo "Third line of text" >> file2.md`
 
 - See differences with `git diff`
@@ -336,7 +336,7 @@ Set up an alias in configurations: `git config --global alias.<desired-alias>` "
 
 ### Other helpful commands
 
-- We made a new file, and renamed it with git mv
+- We made a new file, and renamed it with `git mv`
 - Remove files with `git rm`
 
 ### Rewriting History With Git Reset
@@ -366,7 +366,7 @@ Set up an alias in configurations: `git config --global alias.<desired-alias>` "
 
 - `git reset soft` moves head and moves the files back to staging
 
-- The default for git reset is `git reset --mixed`.
+- The default for `git reset` is `git reset --mixed`.
 
 - Try it with `git reset <first four of commit ID>`
 
@@ -378,7 +378,7 @@ Set up an alias in configurations: `git config --global alias.<desired-alias>` "
 
 - See how these changes work with `git log --oneline`, `git status`, and `cat README.md`
 
-- In case you were worried that git reset had done some damage to your commits, you should know about `git reflog`
+- In case you were worried that `git reset` had done some damage to your commits, you should know about `git reflog`
 
 - `git reflog` shows every place your HEAD has been, including commits and resets.
 
@@ -392,7 +392,7 @@ Set up an alias in configurations: `git config --global alias.<desired-alias>` "
 ### Git cherry-pick
 
 - This command, `git cherry-pick` is not part of the every-day workflow
-- git cherry-pick will bring back specific commits that may have been undone with git reset
+- `git cherry-pick` will bring back specific commits that may have been undone with `git reset`
 - It's also used to grab a single commit off of a feature branch and replay it on master.
 - Practice by typing `git cherry-pick <commit-id>` of a commit that has been undone.
 - It's important to only use `git cherry-pick` with commits that have not been pushed to a remote repository as it changes the commit ID of the same information.
@@ -402,7 +402,7 @@ Set up an alias in configurations: `git config --global alias.<desired-alias>` "
 #### About Rebase
 
 - The rebase command enables you to modify your commit history in a variety of ways.
-- For today's class, we'll be using interactive rebase: git rebase --interactive, or git rebase -i for short.
+- For today's class, we'll be using interactive rebase: `git rebase --interactive`, or `git rebase -i` for short.
 - Because changing your commit history can make things difficult for everyone else using the repository, it's considered bad practice to rebase commits you've already pushed to a repository.
 
 #### Get ready to practice Rebase
